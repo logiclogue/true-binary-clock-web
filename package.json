@@ -4,7 +4,8 @@
   "description": "A true binary clock",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "make",
+    "clean": "make clean"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,8 @@
   "dependencies": {
     "browserify": "^13.1.0"
   },
-  "scripts": {
-      "build": "make",
-      "clean": "make clean"
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.0"
   }
 }
