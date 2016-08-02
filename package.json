@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "make",
-    "clean": "make clean"
+    "clean": "make clean",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
