@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/logiclogue/true-binary-clock-web/issues"
   },
-  "homepage": "https://github.com/logiclogue/true-binary-clock-web#readme"
+  "homepage": "https://github.com/logiclogue/true-binary-clock-web#readme",
+  "dependencies": {
+    "browserify": "^13.1.0"
+  },
+  "scripts": {
+      "build": "make",
+      "clean": "make clean"
+  }
 }
