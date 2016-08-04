@@ -1,10 +1,16 @@
+var TimeInterface = require('./TimeInterface');
+
+
 /*
- * Provides the daily time in binary format.
+ * Provides the time in a binary and decimal format.
  */
 function Time() {
     this.date = new Date();
     this.decimal;
 }
+
+// Implements TimeInterface.
+Time.prototype = Object.create(TimeInterface);
 
 (function (static_, proto_) {
 
