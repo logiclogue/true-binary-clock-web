@@ -1,4 +1,5 @@
 var ClockInterface = require('./ClockInterface');
+var SizeManager = require('./SizeManager');
 
 
 /*
@@ -9,6 +10,7 @@ function ClockDOM() {
     this.offColour = '#161733';
     this.binaryTime;
     this._pixels = [];
+    this._sizeManager = new SizeManager();
 
     this._loadPixels();
 }
@@ -29,6 +31,8 @@ ClockDOM.prototype = Object.create(ClockInterface);
      * Draws the clock to DOM.
      */
     proto_.draw = function () {
+        this._sizeManager.update();
+
         this._forEachPixel(function (id) {
             var pixel = this._pixels[id];
             var bit = this.binaryTime[id];

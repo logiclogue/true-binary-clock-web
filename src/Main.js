@@ -1,6 +1,5 @@
 var ClockDOM = require('./ClockDOM');
 var Time = require('./Time');
-var SizeManager = require('./SizeManager');
 
 
 /*
@@ -9,7 +8,6 @@ var SizeManager = require('./SizeManager');
 function Main() {
     this.time = new Time();
     this.clock = new ClockDOM();
-    this.sizeManager = new SizeManager();
 }
 
 (function (static_, proto_) {
@@ -30,7 +28,6 @@ function Main() {
         this.time.date = new Date();
         var binaryTime = this.time.getBinary();
 
-        this.sizeManager.update();
         this.clock.updateTime(binaryTime);
         this.clock.draw();
     };
