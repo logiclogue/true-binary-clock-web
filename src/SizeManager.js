@@ -11,8 +11,6 @@ function SizeManager() {
         var width = window.innerWidth;
         var height = window.innerHeight;
 
-        console.log(width, height);
-
         if (window.innerWidth > window.innerHeight) {
             this.clock.style.width = height + 'px';
             this.clock.style.height = '100%';
