@@ -12,7 +12,7 @@ style:
 	cat $(STYLEFOLDER)* > $(BUILDFOLDER)all.css
 
 watch: all
-	nodemon --watch $(SOURCEFOLDER) --watch $(STYLEFOLDER) --exec npm run build
+	nodemon -w $(SOURCEFOLDER) -w $(STYLEFOLDER) -e .css,.js --exec "npm run build"
 
 clean:
 	rm -R $(BUILDFOLDER)*
