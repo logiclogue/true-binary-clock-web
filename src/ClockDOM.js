@@ -35,7 +35,7 @@ ClockDOM.prototype = Object.create(ClockInterface);
             else {
                 pixel.style.backgroundColor = this.offColour;
             }
-        });
+        }.bind(this));
     };
 
 
@@ -45,9 +45,11 @@ ClockDOM.prototype = Object.create(ClockInterface);
     proto_._loadPixels = function () {
         var i;
 
-        this._forEachPixel(function (id) {
-            this._pixels.push(document.getElementById('pixel' + i));
-        });
+        this._forEachPixel(function (i) {
+            var element = document.getElementById('pixel' + i);
+
+            this._pixels.push(element);
+        }.bind(this));
     };
 
     /*
