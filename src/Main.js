@@ -11,12 +11,18 @@ function Main() {
 
 (function (static_, proto_) {
 
+    /*
+     * Initial method that is called to start the clock.
+     */
     proto_.start = function () {
         this.time.getBinary();
 
         setInterval(this._interval.bind(this), 80);
     };
 
+    /*
+     * Updates time and clock. Looped.
+     */
     proto_._interval = function () {
         this.time.date = new Date();
         var binaryTime = this.time.getBinary();

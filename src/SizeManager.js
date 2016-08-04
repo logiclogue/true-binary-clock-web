@@ -1,3 +1,6 @@
+/*
+ * Manages the size of the clock for ClockDOM.
+ */
 function SizeManager() {
     var clockId = 'clock';
 
@@ -7,6 +10,9 @@ function SizeManager() {
 
 (function (static_, proto_) {
 
+    /*
+     * Call to check and update the size of the clock.
+     */
     proto_.update = function () {
         var width = window.innerWidth;
         var height = window.innerHeight;

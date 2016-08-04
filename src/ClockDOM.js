@@ -1,6 +1,9 @@
 var ClockInterface = require('./ClockInterface');
 
 
+/*
+ * Responsible for drawing the clock to the DOM.
+ */
 function ClockDOM() {
     this.onColour = '#7277ff';
     this.offColour = '#161733';
@@ -10,6 +13,7 @@ function ClockDOM() {
     this._loadPixels();
 }
 
+// Implements ClockInterface
 ClockDOM.prototype = Object.create(ClockInterface);
 
 (function (static_, proto_) {

@@ -1,20 +1,20 @@
-BUILDFOLDER=build/
-SOURCEFOLDER=src/
-STYLEFOLDER=style/
-MAINJS=$(SOURCEFOLDER)Main.js
+BUILDDIR=build/
+SOURCEDIR=src/
+STYLEDIR=style/
+MAINJS=$(SOURCEDIR)Main.js
 
 all: browserify style
 
 browserify:
-	browserify $(MAINJS) > $(BUILDFOLDER)all.js
+	browserify $(MAINJS) > $(BUILDDIR)all.js
 
 style:
-	cat $(STYLEFOLDER)* > $(BUILDFOLDER)all.css
+	cat $(STYLEDIR)* > $(BUILDDIR)all.css
 
 watch: all
-	nodemon -w $(SOURCEFOLDER) -w $(STYLEFOLDER) -e .css,.js --exec "npm run build"
+	nodemon -w $(SOURCEDIR) -w $(STYLEDIR) -e .css,.js --exec "npm run build"
 
 clean:
-	rm -R $(BUILDFOLDER)*
+	rm -R $(BUILDDIR)*
 
 .PHONY: style
