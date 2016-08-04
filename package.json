@@ -6,7 +6,8 @@
   "scripts": {
     "build": "make",
     "clean": "make clean",
-    "test": "mocha"
+    "test": "mocha",
+    "watch": "make watch"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.0.0"
+    "mocha": "^3.0.0",
+    "nodemon": "^1.10.0"
   }
 }

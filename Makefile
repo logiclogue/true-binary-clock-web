@@ -11,6 +11,9 @@ browserify:
 style:
 	cat $(STYLEFOLDER)* > $(BUILDFOLDER)all.css
 
+watch: all
+	nodemon --watch $(SOURCEFOLDER) --watch $(STYLEFOLDER) --exec npm run build
+
 clean:
 	rm -R $(BUILDFOLDER)*
 
