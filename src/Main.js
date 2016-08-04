@@ -3,6 +3,9 @@ var Time = require('./Time');
 var SizeManager = require('./SizeManager');
 
 
+/*
+ * Main class.
+ */
 function Main() {
     this.time = new Time();
     this.clock = new ClockDOM();
