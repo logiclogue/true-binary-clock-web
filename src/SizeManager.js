@@ -11,12 +11,14 @@ function SizeManager() {
         var width = window.innerWidth;
         var height = window.innerHeight;
 
-        if (window.innerWidth > window.innerHeight) {
+        // Landscape
+        if (width > height) {
             this.clock.style.width = height + 'px';
             this.clock.style.height = '100%';
-            this.body.style.paddingLeft = (width - height) / 2;
-            this.body.style.paddignTop = 0;
+            this.body.style.paddingLeft = ((width - height) / 2) + 'px';
+            this.body.style.paddingTop = 0;
         }
+        // Portrait
         else {
             this.clock.style.height = width + 'px';
             this.clock.style.width = '100%';
