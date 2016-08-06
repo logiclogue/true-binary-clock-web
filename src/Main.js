@@ -21,6 +21,7 @@ function Main() {
         setInterval(this._interval.bind(this), 80);
     };
 
+
     /*
      * Updates time and clock. Looped.
      */
